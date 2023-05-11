@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %} Enlight Search App {% endblock %}
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+                <p>{{msg}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <div class="container-fluid d-flex flex-column justify-content-center align-items-center min-vh-100">
+        <div class="text-center" style="margin-top: -500px;">
+                <h1 class="my-4">Enlight Search App</h1>
+        </div>
+        <div class="text-center mb-5">
+            <form action="#" method="post">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Search something" name="query">
+                    <input class="btn btn-outline-secondary" type="submit" value="Search" id="button-addon2">
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
