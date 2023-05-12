@@ -1,2 +1,5 @@
-flask
-redis
+flask~=2.3.2
+redis~=4.5.5
+requests~=2.30.0
+atlassian-python-api~=3.36.0
+fuzzywuzzy~=0.18.0
