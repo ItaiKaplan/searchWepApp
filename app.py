@@ -4,7 +4,6 @@ from Readers.ReadersManager import get_reader
 from fuzzywuzzy import fuzz
 import yaml
 
-
 with open('config.yaml', 'r') as f:
     config = yaml.safe_load(f)
 
@@ -35,12 +34,16 @@ def search_page():
     if request.method == 'POST' and request.form['search'] != "":
         search_from_user = request.form['search']
         db.insert_search(search_from_user)
-        content = reader.read()
-        result = search(search_from_user, content)
-        if result != "":
-            flash(f'""{search_from_user}" is in the {result} page"', "secondary")
-        else:
-            flash(f'Could not find "{search_from_user}"', 'warning')
+        try:
+            content = reader.read()
+            result = search(search_from_user, content)
+            if result != "":
+                flash(f'""{search_from_user}" is in the {result} page"', "secondary")
+            else:
+                flash(f'Could not find "{search_from_user}"', 'warning')
+        except:
+            flash(f'Could not read from Confluence', 'danger')
+
     searches_counter = db.get_num_of_queries()
     return render_template("index.html", num_of_queries=searches_counter)
 
@@ -49,4 +52,4 @@ if __name__ == "__main__":
     db = get_database()
     reader = get_reader()
 
-    app.run()
+    app.run(debug=True)
