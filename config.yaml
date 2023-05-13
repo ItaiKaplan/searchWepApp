@@ -1,0 +1,7 @@
+secret_key: "itai123456enlightEx$$$"
+database_type: redis
+reader_type: confluence
+api_token: "ATATT3xFfGF0kP3fduclL5h6M40z8FA8cJAKNtl-fxKJhkSRGGSDBARIbMb_Pz4q_6P8aL116cukj1xlIFn8V7ZtnWwU0g9C5sC2o46j3EgzP0TLHkpmhH1I-zsvp2kK_vEVef2WKJpbm2aHmmx1JZBFJjziSBsXvxMuQmYz-077tdaWXomuAZc=A279DF23"
+base_url: https://enlight-exercise.atlassian.net
+username: iykaplan1@gmail.com
+space: Exercise
