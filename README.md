@@ -6,6 +6,7 @@
 Clone the repo <br />
 Run the command pip install -r requirements.txt (preferably in a virtual environment) <br />
 Install Redis (If you are using a Windows machine you will need to install and run it on a virtual machine. You can see [this](https://www.youtube.com/watch?v=_nFwPTHOMIY&t=539s) video to see how) <br />
+Update inside config.yaml file your confluence username and password (or API token) <br />
 Run app.py
 
 **About the process:**
