@@ -2,6 +2,12 @@
 
 **This is a very basic implementation of a search app, that connects to a given Confluence space, and searches its pages for a search input from the user.**
 
+**Usage** <br />
+Clone the repo <br />
+Run the command pip install -r requirements.txt (preferably in a virtual environment) <br />
+Install Redis (If you are using a Windows machine you will need to install and run it on a virtual machine. You can see [this](https://www.youtube.com/watch?v=_nFwPTHOMIY&t=539s) video to see how) <br />
+Run app.py
+
 **About the process:**
 
 **App:** I created my app using the Python Flask web framework, I did so mainly because Flask is easy to use, and since time was an issue, I wanted to be able to build my app fast, while still having solid foundation. <br />
